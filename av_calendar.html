@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advent Calendar</title>
+    <!--<link rel="stylesheet" href="av_calendar.css">-->
+    <style>
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            gap: 10px;
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .day {
+            background-color: #0a6d21;
+            color: white;
+            /*background-image: url('images\door_open.jpg');*/
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .bday {
+            background-color: white;
+            color: white;
+            opacity: 0.0;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            border-radius: 5px;
+            transition: trasform 0.3s;
+        }
+        .sday {
+            background-color: brown;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            border-radius: 5px;
+            transition: trasform 0.3s;
+        }
+
+        .day:hover {
+            transform: scale(1.1);
+        }
+
+        .hidden-images img {
+            display: none;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 60px;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('images/snow.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+    
+    <div class=center style="font-size: 60px; width: 600px; height: 80px; align-content: center;">
+        2024 Advent Calendar
+    </div>
+    <div>
+        <img id="imgstar" src="images/star.png" alt="star 1" class="center" width="80px" height="80px" style="padding-right: 30px;">
+    </div>
+    
+    <div class="calendar">
+        <!-- 25 days for an advent calendar -->
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="day" onclick="openPopup(25)">25</div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="day" onclick="openPopup(24)">24</div>
+        <div class="day" onclick="openPopup(23)">23</div>
+        <div class="day" onclick="openPopup(22)">22</div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="day" onclick="openPopup(17)">17</div>
+        <div class="day" onclick="openPopup(18)">18</div>
+        <div class="day" onclick="openPopup(19)">19</div>
+        <div class="day" onclick="openPopup(20)">20</div>
+        <div class="day" onclick="openPopup(21)">21</div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="day" onclick="openPopup(16)">16</div>
+        <div class="day" onclick="openPopup(15)">15</div>
+        <div class="day" onclick="openPopup(14)">14</div>
+        <div class="day" onclick="openPopup(13)">13</div>
+        <div class="day" onclick="openPopup(12)">12</div>
+        <div class="day" onclick="openPopup(11)">11</div>
+        <div class="day" onclick="openPopup(10)">10</div>
+        <div class="bday"> </div>
+        <div class="day" onclick="openPopup(1)">1</div>
+        <div class="day" onclick="openPopup(2)">2</div>
+        <div class="day" onclick="openPopup(3)">3</div>
+        <div class="day" onclick="openPopup(4)">4</div>
+        <div class="day" onclick="openPopup(5)">5</div>
+        <div class="day" onclick="openPopup(6)">6</div>
+        <div class="day" onclick="openPopup(7)">7</div>
+        <div class="day" onclick="openPopup(8)">8</div>
+        <div class="day" onclick="openPopup(9)">9</div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="sday"> </div>
+        <div class="sday"> </div>
+        <div class="sday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="sday"> </div>
+        <div class="sday"> </div>
+        <div class="sday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+        <div class="bday"> </div>
+    </div>
+
+    <!-- <div class="hidden-images">
+        <img id="img1" src="images/i1.jpg" alt="Day 1" class="center" width="800px" height="600px">
+        <img id="img2" src="images/i2.jpg" alt="Day 2" class="center" width="800px" height="600px">
+        <img id="img3" src="images/i3.jpg" alt="Day 3" class="center" width="800px" height="600px">
+        <img id="img4" src="images/i4.jpg" alt="Day 4" class="center" width="800px" height="600px">
+        <img id="img5" src="images/i5.jpg" alt="Day 5" class="center" width="800px" height="600px">
+        <img id="img6" src="images/i6.jpg" alt="Day 6" class="center" width="800px" height="600px">
+        <img id="img7" src="images/i7.jpg" alt="Day 7" class="center" width="800px" height="600px">
+        <img id="img8" src="images/i8.jpg" alt="Day 8" class="center" width="800px" height="600px">
+        <img id="img9" src="images/i9.jpg" alt="Day 9" class="center" width="800px" height="600px">
+        <img id="img10" src="images/i10.jpg" alt="Day 10" class="center" width="800px" height="600px">
+        <img id="img11" src="images/i11.jpg" alt="Day 11" class="center" width="800px" height="600px">
+        <img id="img12" src="images/i12jpg" alt="Day 12" class="center" width="800px" height="600px">
+        <img id="img13" src="images/i13.jpg" alt="Day 13" class="center" width="800px" height="600px">
+        <img id="img14" src="images/i14.jpg" alt="Day 14" class="center" width="800px" height="600px">
+        <img id="img15" src="images/i15.jpg" alt="Day 15" class="center" width="800px" height="600px">
+        <img id="img16" src="images/i16.jpg" alt="Day 16" class="center" width="800px" height="600px">
+        <img id="img17" src="images/i17.jpg" alt="Day 17" class="center" width="800px" height="600px">
+        <img id="img18" src="images/i18.jpg" alt="Day 18" class="center" width="800px" height="600px">
+        <img id="img19" src="images/i19.jpg" alt="Day 19" class="center" width="800px" height="600px">
+        <img id="img20" src="images/i20.jpg" alt="Day 20" class="center" width="800px" height="600px">
+        <img id="img21" src="images/i21.jpg" alt="Day 21" class="center" width="800px" height="600px">
+        <img id="img22" src="images/i22.jpg" alt="Day 22" class="center" width="800px" height="600px">
+        <img id="img23" src="images/i23.jpg" alt="Day 23" class="center" width="800px" height="600px">
+        <img id="img24" src="images/i24.jpg" alt="Day 24" class="center" width="800px" height="600px">
+        <img id="img25" src="images/i25.jpg" alt="Day 25" class="center" width="800px" height="600px">
+        <img id="nopeeking" src="images/nopeek.jpg" alt="No Peeking!" class="center" width="800px" height="600px">
+    </div> -->
+
+    <script>
+        // function reveal(day) {
+        //     // Hide all images
+        //     document.querySelectorAll('.hidden-images img').forEach(img => img.style.display = 'none');
+        //     // Show the selected day's image
+        //     var dt = new Date()
+        //     var DayOfMonth = dt.getDate()
+        //     if (DayOfMonth >= parseInt(day) & DayOfMonth < 26)
+        //     {
+        //         document.getElementById('img' + day).style.display = 'block'; 
+        //     }
+        //     else
+        //     {
+        //         document.getElementById('nopeeking').style.display = 'block';
+        //     }
+        // }
+        function openPopup(day) {
+            var dt = new Date()
+            var DayOfMonth = dt.getDate()
+            if (DayOfMonth >= parseInt(day) & DayOfMonth < 26)
+            {
+                // URL of the image
+                var imageUrl = "images/i" + day + ".jpg"; 
+                // Opening a new popup window with the image 
+            }
+            else
+            {
+                var imageUrl = "images/nopeeking.jpg"
+            }
+            window.open(URL=imageUrl, name="_blank", specs="titlebar=0,status=0,menubar=0,toolbar=0,width=600,height=400");
+        }
+    </script>
+</body>
+</html>
