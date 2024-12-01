@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advent Calendar</title>
-    <!--<link rel="stylesheet" href="av_calendar.css">-->
     <style>
         .calendar {
             display: grid;
@@ -17,7 +16,6 @@
         .day {
             background-color: #0a6d21;
             color: white;
-            /*background-image: url('images\door_open.jpg');*/
             text-align: center;
             padding: 20px;
             font-size: 24px;
@@ -137,51 +135,7 @@
         <div class="bday"> </div>
     </div>
 
-    <!-- <div class="hidden-images">
-        <img id="img1" src="images/i1.jpg" alt="Day 1" class="center" width="800px" height="600px">
-        <img id="img2" src="images/i2.jpg" alt="Day 2" class="center" width="800px" height="600px">
-        <img id="img3" src="images/i3.jpg" alt="Day 3" class="center" width="800px" height="600px">
-        <img id="img4" src="images/i4.jpg" alt="Day 4" class="center" width="800px" height="600px">
-        <img id="img5" src="images/i5.jpg" alt="Day 5" class="center" width="800px" height="600px">
-        <img id="img6" src="images/i6.jpg" alt="Day 6" class="center" width="800px" height="600px">
-        <img id="img7" src="images/i7.jpg" alt="Day 7" class="center" width="800px" height="600px">
-        <img id="img8" src="images/i8.jpg" alt="Day 8" class="center" width="800px" height="600px">
-        <img id="img9" src="images/i9.jpg" alt="Day 9" class="center" width="800px" height="600px">
-        <img id="img10" src="images/i10.jpg" alt="Day 10" class="center" width="800px" height="600px">
-        <img id="img11" src="images/i11.jpg" alt="Day 11" class="center" width="800px" height="600px">
-        <img id="img12" src="images/i12jpg" alt="Day 12" class="center" width="800px" height="600px">
-        <img id="img13" src="images/i13.jpg" alt="Day 13" class="center" width="800px" height="600px">
-        <img id="img14" src="images/i14.jpg" alt="Day 14" class="center" width="800px" height="600px">
-        <img id="img15" src="images/i15.jpg" alt="Day 15" class="center" width="800px" height="600px">
-        <img id="img16" src="images/i16.jpg" alt="Day 16" class="center" width="800px" height="600px">
-        <img id="img17" src="images/i17.jpg" alt="Day 17" class="center" width="800px" height="600px">
-        <img id="img18" src="images/i18.jpg" alt="Day 18" class="center" width="800px" height="600px">
-        <img id="img19" src="images/i19.jpg" alt="Day 19" class="center" width="800px" height="600px">
-        <img id="img20" src="images/i20.jpg" alt="Day 20" class="center" width="800px" height="600px">
-        <img id="img21" src="images/i21.jpg" alt="Day 21" class="center" width="800px" height="600px">
-        <img id="img22" src="images/i22.jpg" alt="Day 22" class="center" width="800px" height="600px">
-        <img id="img23" src="images/i23.jpg" alt="Day 23" class="center" width="800px" height="600px">
-        <img id="img24" src="images/i24.jpg" alt="Day 24" class="center" width="800px" height="600px">
-        <img id="img25" src="images/i25.jpg" alt="Day 25" class="center" width="800px" height="600px">
-        <img id="nopeeking" src="images/nopeek.jpg" alt="No Peeking!" class="center" width="800px" height="600px">
-    </div> -->
-
     <script>
-        // function reveal(day) {
-        //     // Hide all images
-        //     document.querySelectorAll('.hidden-images img').forEach(img => img.style.display = 'none');
-        //     // Show the selected day's image
-        //     var dt = new Date()
-        //     var DayOfMonth = dt.getDate()
-        //     if (DayOfMonth >= parseInt(day) & DayOfMonth < 26)
-        //     {
-        //         document.getElementById('img' + day).style.display = 'block'; 
-        //     }
-        //     else
-        //     {
-        //         document.getElementById('nopeeking').style.display = 'block';
-        //     }
-        // }
         function openPopup(day) {
             var dt = new Date()
             var DayOfMonth = dt.getDate()
