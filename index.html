@@ -139,16 +139,22 @@
         function openPopup(day) {
             var dt = new Date()
             var DayOfMonth = dt.getDate()
-            if (DayOfMonth >= parseInt(day) & DayOfMonth < 26)
-            {
-                // URL of the image
-                var imageUrl = "images/i" + day + ".jpg"; 
-                // Opening a new popup window with the image 
+            var month = dt.getMonth()
+            if(month==11){
+                if (DayOfMonth >= parseInt(day) & DayOfMonth < 26)
+                {
+                    // URL of the image
+                    var imageUrl = "images/i" + day + ".jpg"; 
+                     
+                }
+                else{
+                    var imageUrl = "images/nopeeking.jpg"
+                }
             }
-            else
-            {
+            else{
                 var imageUrl = "images/nopeeking.jpg"
             }
+            // Opening a new popup window with the image
             window.open(URL=imageUrl, name="_blank", specs="titlebar=0,status=0,menubar=0,toolbar=0,width=600,height=400");
         }
     </script>
