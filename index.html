@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advent Calendar</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        h1 {
+            font-family: 'Berkshire Swash', cursive;
+        }
+
+        body {
+            font-family: 'Berkshire Swash', cursive;
+        }
         .calendar {
             display: grid;
             grid-template-columns: repeat(9, 1fr);
-            gap: 10px;
-            width: 600px;
+            row-gap: 25px;
+            column-gap: 5px;
+            width: auto;
             margin-left: auto;
             margin-right: auto;
         }
@@ -23,6 +32,7 @@
             border-radius: 5px;
             transition: transform 0.3s;
         }
+        
         .bday {
             background-color: white;
             color: white;
@@ -34,7 +44,7 @@
             transition: trasform 0.3s;
         }
         .sday {
-            background-color: brown;
+            background-color: rgb(100, 78, 30);
             color: white;
             text-align: center;
             padding: 20px;
@@ -47,38 +57,71 @@
             transform: scale(1.1);
         }
 
+        .sday:hover{
+            transform: scale(none);
+        }
+
+        .bday:hover{
+            transform: scale(none);
+        }
+
         .hidden-images img {
             display: none;
         }
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 60px;
+
+        .container{
+            align-items: center;
+            justify-content: center;
+            display: flex;
         }
+        
+
+
+        @media (max-width: 768px) {
+            .tree{
+                transform: scale(0.8);
+            }
+        }
+
+         @media (max-width: 550px) {
+            .tree{
+                transform: scale(0.6);
+                margin-top: -20%;
+            }
+        }
+
+         @media (max-width: 400px) {
+            .tree{
+                transform: scale(0.5);
+                margin-top: -40%;
+            }
+        }
+
+
     </style>
 </head>
 
-<body style="background-image: url('images/snow.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;" onload="setAdyear()">
-    
+<body style="background-image: url('images/background.png'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;" onload="setAdyear()">
+
     <div>
-        <div class=center style="font-size: 60px; width: 600px; height: 80px; align-content: center; padding-left: 15%;">
-            Advent Calendar
-        </div>
-        <div class="center" style="font-size: 40px; width: 600px; height: 80px; align-content: center; padding-left: 10%;">
-            <p style="font-size: 25px">
+        <div class="container">
+            <div>
+            <p style="font-size: 60px; text-align: center; margin-bottom: 0;">Advent Calendar</p>
+            <p style="font-size: 25px; text-align: center;">
                 Select Year
-                <input id="adyear" style="font-size: 25px" type="number" min=2024>
+                <input id="adyear" style="font-size: 25px; font-family: 'Berkshire Swash', cursive; text-align: center; justify-content: center; background-color: #fffaf6; border: solid 3px #e9e2c8; border-radius: 5px;" type="number" min=2024;>
                  & Click On The Day
                 </input>
             </p>
+            </div>
         </div>
     </div>
-    <div>
-        <img id="imgstar" src="images/star.png" alt="star 1" class="center" width="80px" height="80px" style="padding-right: 30px;">
+    <div class="tree">
+    <div class="container">
+        <img id="imgstar" src="images/star.png" alt="star 1" width="80px" height="80px">
     </div>
-    
-    <div class="calendar">
+    <div class="container">
+    <div class="calendar" style="max-width: fit-content;">
         <!-- 25 days for an advent calendar -->
         <div class="bday"> </div>
         <div class="bday"> </div>
@@ -144,7 +187,8 @@
         <div class="bday"> </div>
         <div class="bday"> </div>
     </div>
-
+    </div>
+</div>
     <script>
         function setAdyear() {
             var dt = new Date()
